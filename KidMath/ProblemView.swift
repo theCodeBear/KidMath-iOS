@@ -14,45 +14,45 @@ class ProblemView: UIViewController {
     @IBOutlet weak var number1: UILabel!
     @IBOutlet weak var number2: UILabel!
     @IBOutlet weak var answerInput: UILabel!
-    
-    @IBOutlet weak var Button1: UIButton!
-    @IBOutlet weak var Button2: UIButton!
-    @IBOutlet weak var Button3: UIButton!
-    @IBOutlet weak var Button4: UIButton!
-    @IBOutlet weak var Button5: UIButton!
-    @IBOutlet weak var Button6: UIButton!
-    @IBOutlet weak var Button7: UIButton!
-    @IBOutlet weak var Button8: UIButton!
-    @IBOutlet weak var Button9: UIButton!
-    @IBOutlet weak var Button0: UIButton!
-    @IBOutlet weak var ButtonDot: UIButton!
-    @IBOutlet weak var ButtonNeg: UIButton!
-    @IBOutlet weak var ButtonBackspace: UIButton!
-    
+    @IBOutlet weak var navbar: UINavigationItem!
     
     var problemTypeText: String?
     var answer: Int = 0
-    
     var additionButton = UIButton()
+    var button1: UIBarButtonItem!
+    var button2: UIBarButtonItem!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var button1 = UIBarButtonItem(title: "0", style: .Plain, target: self, action: "")
-        var button2 = UIBarButtonItem(title: "0", style: .Plain, target: self, action: "")
+        button1 = UIBarButtonItem(title: "0", style: .Plain, target: self, action: "")
+        button2 = UIBarButtonItem(title: "0", style: .Plain, target: self, action: "")
         button1.tintColor = UIColor.greenColor()
         button2.tintColor = UIColor.redColor()
         self.navigationItem.rightBarButtonItems = NSArray(array: [button1, button2]) as [AnyObject]
-//        println("lkbja: \(problemTypeText!)")
         var sign = problemTypeText!.componentsSeparatedByString(" ")[1]
         problemType.text = sign
 //        problemType.sizeToFit()
+        writeViewTitle(mathType: sign)
         newProblem(level: 1, mathType: sign)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func writeViewTitle(#mathType: String) {
+        if mathType == "+" {
+            navbar.title = "Addition"
+        } else if mathType == "-" {
+            navbar.title = "Subtraction"
+        } else if mathType == "x" {
+            navbar.title = "Multiplication"
+        } else if mathType == "÷" {
+            navbar.title = "Division"
+        }
     }
     
     func newProblem(#level: Int, mathType: String) {
@@ -96,8 +96,10 @@ class ProblemView: UIViewController {
         println("answer: \(answer)\nUser Answer: \(answerInput.text!)")
         if answerInput.text! == String(answer) {
             correct = "Correct"
+            button1.title! = String(button1.title!.toInt()! + 1)
         } else {
             correct = "Wrong"
+            button2.title! = String(button2.title!.toInt()! + 1)
         }
         let alert = UIAlertController(title: "Results", message: correct, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)

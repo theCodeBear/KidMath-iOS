@@ -289,23 +289,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Addition" id="kD6-J1-ekZ"/>
+                    <navigationItem key="navigationItem" id="kD6-J1-ekZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Button0" destination="wre-gZ-eux" id="I1X-bK-2uP"/>
-                        <outlet property="Button1" destination="Di0-sv-qz9" id="reG-5j-rpE"/>
-                        <outlet property="Button2" destination="dlT-wj-H3c" id="ngk-UY-eKw"/>
-                        <outlet property="Button3" destination="6C7-mQ-JVR" id="IFI-Fd-KbE"/>
-                        <outlet property="Button4" destination="d4d-Ih-8QN" id="XT0-4c-xRD"/>
-                        <outlet property="Button5" destination="B0q-BF-53d" id="3W6-Yb-KrH"/>
-                        <outlet property="Button6" destination="CH9-Jl-2hL" id="T0I-D7-KEE"/>
-                        <outlet property="Button7" destination="ZPU-Fc-xCV" id="q4i-e7-dgk"/>
-                        <outlet property="Button8" destination="AK6-0Q-44h" id="93y-S8-O6r"/>
-                        <outlet property="Button9" destination="323-Vw-YbX" id="SFA-7L-Xah"/>
-                        <outlet property="ButtonBackspace" destination="fXZ-MM-0Is" id="F0l-yZ-i6A"/>
-                        <outlet property="ButtonDot" destination="pdg-q1-kvu" id="Jg2-gq-nSW"/>
-                        <outlet property="ButtonNeg" destination="UVB-5U-d2h" id="QMT-vd-3Og"/>
                         <outlet property="answerInput" destination="RWI-bb-DXM" id="COe-cI-y3R"/>
+                        <outlet property="navbar" destination="kD6-J1-ekZ" id="nUe-x1-pVk"/>
                         <outlet property="number1" destination="ZqE-fc-wML" id="pL6-EX-cnf"/>
                         <outlet property="number2" destination="DEg-dv-lKW" id="qSe-pX-HsO"/>
                         <outlet property="problemType" destination="dQq-eg-BPS" id="12n-Dq-Rye"/>
