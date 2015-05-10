@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.guestButton.addTarget(self, action: "guestButtonClick:", forControlEvents: .TouchUpInside)
-        self.newParentButton.addTarget(self, action: "newParentButtonClick", forControlEvents: .TouchUpInside)
+        self.newParentButton.addTarget(self, action: "newParentButtonClick:", forControlEvents: .TouchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,9 @@ class ViewController: UIViewController {
         self.performSegueWithIdentifier("toProblemsMain", sender: sender as! UIButton)
     }
     
-    @IBAction
+    @IBAction func newParentButtonClick(sender: AnyObject) {
+        self.performSegueWithIdentifier("toNewParent", sender: sender as! UIButton)
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         navigationItem.title = " "
