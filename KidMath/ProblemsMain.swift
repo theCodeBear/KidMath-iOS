@@ -16,14 +16,18 @@ class ProblemsMain: UIViewController {
     @IBOutlet weak var divideButton: UIButton!
     @IBOutlet weak var arithmeticButton: UIButton!
     var problemType: String?
+    
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "Problem Types"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.plusButton.addTarget(self, action: "clickPlusButton:", forControlEvents: .TouchUpInside)
         self.subtractButton.addTarget(self, action: "clickSubtractButton:", forControlEvents: .TouchUpInside)
         self.multiplyButton.addTarget(self, action: "clickMultiplyButton:", forControlEvents: .TouchUpInside)
         self.divideButton.addTarget(self, action: "clickDivideButton:", forControlEvents: .TouchUpInside)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,9 +52,9 @@ class ProblemsMain: UIViewController {
 //        segue.identifier == "toProblemView"
         var button = sender as! UIButton
         var text = button.currentTitle
-        println("blah: \(text!)")
         let destinationVC = segue.destinationViewController as! ProblemView
         destinationVC.problemTypeText = text
+        navigationItem.title = " "
     }
     
 

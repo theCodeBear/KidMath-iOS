@@ -9,15 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var guestButton: UIButton!
+    @IBOutlet weak var newParentButton: UIButton!
+
+
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "KidMath"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.guestButton.addTarget(self, action: "guestButtonClick:", forControlEvents: .TouchUpInside)
+        self.newParentButton.addTarget(self, action: "newParentButtonClick", forControlEvents: .TouchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func guestButtonClick(sender: AnyObject) {
+        self.performSegueWithIdentifier("toProblemsMain", sender: sender as! UIButton)
+    }
+    
+    @IBAction
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        navigationItem.title = " "
     }
 
 

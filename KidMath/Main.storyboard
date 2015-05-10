@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--KidMath-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="KidMath" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,9 +22,6 @@
                                 <state key="normal" title="New Parent">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="2OK-LK-9FE" kind="show" id="zIa-KI-eZG"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBT-fI-DB4">
                                 <rect key="frame" x="49" y="187" width="275" height="30"/>
@@ -32,21 +29,24 @@
                                 <state key="normal" title="Guest">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BQD-0q-9ER" kind="show" id="ymS-CH-iMd"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="KidMath" id="xOo-zC-2xK"/>
+                    <navigationItem key="navigationItem" id="xOo-zC-2xK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="guestButton" destination="pBT-fI-DB4" id="Qix-JO-3cd"/>
+                        <outlet property="newParentButton" destination="HHw-yh-eBx" id="sX9-Ie-rGb"/>
+                        <segue destination="BQD-0q-9ER" kind="show" identifier="toProblemsMain" id="QEt-T8-HOu"/>
+                        <segue destination="2OK-LK-9FE" kind="show" identifier="toNewParent" id="pqh-oD-isr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1251.5" y="386.5"/>
         </scene>
-        <!--Kid's Name-->
+        <!--Problems Main-->
         <scene sceneID="1Ae-4f-gSf">
             <objects>
                 <viewController id="BQD-0q-9ER" customClass="ProblemsMain" customModule="KidMath" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Kid's Name" id="ayR-g2-cI7">
+                    <navigationItem key="navigationItem" id="ayR-g2-cI7">
                         <barButtonItem key="rightBarButtonItem" title="Notifs" id="xvH-Qo-XfZ"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -108,7 +108,7 @@
         <!--Problem View-->
         <scene sceneID="qlO-vi-eyJ">
             <objects>
-                <viewController title="Problem View" id="bNf-7d-sZt" customClass="ProblemView" customModule="KidMath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bNf-7d-sZt" customClass="ProblemView" customModule="KidMath" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lg5-z3-V5D"/>
                         <viewControllerLayoutGuide type="bottom" id="fkv-lp-Dli"/>
@@ -369,6 +369,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nJa-FC-97U">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="SSZ-cn-J6n"/>
                     </connections>

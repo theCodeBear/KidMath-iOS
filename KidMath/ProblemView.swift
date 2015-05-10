@@ -25,6 +25,7 @@ class ProblemView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.hidesBackButton = true
         
         button1 = UIBarButtonItem(title: "0", style: .Plain, target: self, action: "")
         button2 = UIBarButtonItem(title: "0", style: .Plain, target: self, action: "")
@@ -74,13 +75,10 @@ class ProblemView: UIViewController {
 
     @IBAction func numberPress(#sender: UIButton) {
         if sender.currentTitle == "Backspace" {
-            // if answer empty don't do anything on backspace press, otherwise delete last character
             if answerInput.text != "" { answerInput.text! = dropLast(answerInput.text!) }
         } else if sender.currentTitle == "-" {
-            // if input field is empty, add negative sign
             if answerInput.text == "" {
                 answerInput.text! = "-"
-        // else toggle the negative sign in the answer
             } else if answerInput.text![answerInput.text!.startIndex] == "-" {
                 answerInput.text = dropFirst(answerInput.text!)
             } else {
@@ -93,7 +91,6 @@ class ProblemView: UIViewController {
 
     @IBAction func checkAnswer() {
         var correct: String = ""
-        println("answer: \(answer)\nUser Answer: \(answerInput.text!)")
         if answerInput.text! == String(answer) {
             correct = "Correct"
             button1.title! = String(button1.title!.toInt()! + 1)
@@ -101,10 +98,6 @@ class ProblemView: UIViewController {
             correct = "Wrong"
             button2.title! = String(button2.title!.toInt()! + 1)
         }
-        let alert = UIAlertController(title: "Results", message: correct, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
         answerInput.text = ""
         newProblem(level: 1, mathType: problemType.text!)
     }

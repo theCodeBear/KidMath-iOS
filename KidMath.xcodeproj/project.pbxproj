@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C97D07BA1AFDBD2700690DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07B91AFDBD2700690DB4 /* AppDelegate.swift */; };
 		C97D07BC1AFDBD2700690DB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07BB1AFDBD2700690DB4 /* ViewController.swift */; };
-		C97D07BF1AFDBD2700690DB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C97D07BD1AFDBD2700690DB4 /* Main.storyboard */; };
 		C97D07C11AFDBD2700690DB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97D07C01AFDBD2700690DB4 /* Images.xcassets */; };
 		C97D07C41AFDBD2700690DB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97D07C21AFDBD2700690DB4 /* LaunchScreen.xib */; };
 		C97D07D01AFDBD2700690DB4 /* KidMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07CF1AFDBD2700690DB4 /* KidMathTests.swift */; };
@@ -17,6 +16,7 @@
 		C97D07DD1AFDCB7400690DB4 /* KidMath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C97D07DB1AFDCB7400690DB4 /* KidMath.xcdatamodeld */; };
 		C97D07E31AFDD01600690DB4 /* ProblemsMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07E21AFDD01600690DB4 /* ProblemsMain.swift */; };
 		C97D07E51AFDD53200690DB4 /* ProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07E41AFDD53200690DB4 /* ProblemView.swift */; };
+		C9D68B611AFF536600EBFD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D68B601AFF536600EBFD9E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,6 @@
 		C97D07B81AFDBD2700690DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97D07B91AFDBD2700690DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C97D07BB1AFDBD2700690DB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C97D07BE1AFDBD2700690DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C97D07C01AFDBD2700690DB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C97D07C31AFDBD2700690DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C97D07C91AFDBD2700690DB4 /* KidMathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidMathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +43,7 @@
 		C97D07DC1AFDCB7400690DB4 /* KidMath.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KidMath.xcdatamodel; sourceTree = "<group>"; };
 		C97D07E21AFDD01600690DB4 /* ProblemsMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemsMain.swift; sourceTree = "<group>"; };
 		C97D07E41AFDD53200690DB4 /* ProblemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemView.swift; sourceTree = "<group>"; };
+		C9D68B601AFF536600EBFD9E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				C97D07B91AFDBD2700690DB4 /* AppDelegate.swift */,
 				C97D07DB1AFDCB7400690DB4 /* KidMath.xcdatamodeld */,
 				C97D07BB1AFDBD2700690DB4 /* ViewController.swift */,
-				C97D07BD1AFDBD2700690DB4 /* Main.storyboard */,
+				C9D68B601AFF536600EBFD9E /* Main.storyboard */,
 				C97D07C01AFDBD2700690DB4 /* Images.xcassets */,
 				C97D07C21AFDBD2700690DB4 /* LaunchScreen.xib */,
 				C97D07B71AFDBD2700690DB4 /* Supporting Files */,
@@ -204,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C97D07BF1AFDBD2700690DB4 /* Main.storyboard in Resources */,
+				C9D68B611AFF536600EBFD9E /* Main.storyboard in Resources */,
 				C97D07C41AFDBD2700690DB4 /* LaunchScreen.xib in Resources */,
 				C97D07C11AFDBD2700690DB4 /* Images.xcassets in Resources */,
 			);
@@ -252,14 +252,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C97D07BD1AFDBD2700690DB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C97D07BE1AFDBD2700690DB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C97D07C21AFDBD2700690DB4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -427,6 +419,7 @@
 				C97D07D51AFDBD2700690DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C97D07D61AFDBD2700690DB4 /* Build configuration list for PBXNativeTarget "KidMathTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +428,7 @@
 				C97D07D81AFDBD2700690DB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
