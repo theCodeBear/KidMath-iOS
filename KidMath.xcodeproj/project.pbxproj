@@ -13,6 +13,10 @@
 		C97D07C11AFDBD2700690DB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C97D07C01AFDBD2700690DB4 /* Images.xcassets */; };
 		C97D07C41AFDBD2700690DB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97D07C21AFDBD2700690DB4 /* LaunchScreen.xib */; };
 		C97D07D01AFDBD2700690DB4 /* KidMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07CF1AFDBD2700690DB4 /* KidMathTests.swift */; };
+		C97D07DA1AFDBDE500690DB4 /* NewParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07D91AFDBDE500690DB4 /* NewParent.swift */; };
+		C97D07DD1AFDCB7400690DB4 /* KidMath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C97D07DB1AFDCB7400690DB4 /* KidMath.xcdatamodeld */; };
+		C97D07E31AFDD01600690DB4 /* ProblemsMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07E21AFDD01600690DB4 /* ProblemsMain.swift */; };
+		C97D07E51AFDD53200690DB4 /* ProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D07E41AFDD53200690DB4 /* ProblemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		C97D07C91AFDBD2700690DB4 /* KidMathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidMathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97D07CE1AFDBD2700690DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97D07CF1AFDBD2700690DB4 /* KidMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidMathTests.swift; sourceTree = "<group>"; };
+		C97D07D91AFDBDE500690DB4 /* NewParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewParent.swift; sourceTree = "<group>"; };
+		C97D07DC1AFDCB7400690DB4 /* KidMath.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KidMath.xcdatamodel; sourceTree = "<group>"; };
+		C97D07E21AFDD01600690DB4 /* ProblemsMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemsMain.swift; sourceTree = "<group>"; };
+		C97D07E41AFDD53200690DB4 /* ProblemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +86,15 @@
 			isa = PBXGroup;
 			children = (
 				C97D07B91AFDBD2700690DB4 /* AppDelegate.swift */,
+				C97D07DB1AFDCB7400690DB4 /* KidMath.xcdatamodeld */,
 				C97D07BB1AFDBD2700690DB4 /* ViewController.swift */,
 				C97D07BD1AFDBD2700690DB4 /* Main.storyboard */,
 				C97D07C01AFDBD2700690DB4 /* Images.xcassets */,
 				C97D07C21AFDBD2700690DB4 /* LaunchScreen.xib */,
 				C97D07B71AFDBD2700690DB4 /* Supporting Files */,
+				C97D07D91AFDBDE500690DB4 /* NewParent.swift */,
+				C97D07E21AFDD01600690DB4 /* ProblemsMain.swift */,
+				C97D07E41AFDD53200690DB4 /* ProblemView.swift */,
 			);
 			path = KidMath;
 			sourceTree = "<group>";
@@ -212,7 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97D07E51AFDD53200690DB4 /* ProblemView.swift in Sources */,
 				C97D07BC1AFDBD2700690DB4 /* ViewController.swift in Sources */,
+				C97D07E31AFDD01600690DB4 /* ProblemsMain.swift in Sources */,
+				C97D07DA1AFDBDE500690DB4 /* NewParent.swift in Sources */,
+				C97D07DD1AFDCB7400690DB4 /* KidMath.xcdatamodeld in Sources */,
 				C97D07BA1AFDBD2700690DB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +359,7 @@
 				INFOPLIST_FILE = KidMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,6 +370,7 @@
 				INFOPLIST_FILE = KidMath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -419,6 +437,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C97D07DB1AFDCB7400690DB4 /* KidMath.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C97D07DC1AFDCB7400690DB4 /* KidMath.xcdatamodel */,
+			);
+			currentVersion = C97D07DC1AFDCB7400690DB4 /* KidMath.xcdatamodel */;
+			path = KidMath.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C97D07AC1AFDBD2700690DB4 /* Project object */;
 }
