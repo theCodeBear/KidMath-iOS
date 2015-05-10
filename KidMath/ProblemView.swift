@@ -88,19 +88,35 @@ class ProblemView: UIViewController {
             answerInput.text! += sender.currentTitle!
         }
     }
+    
+    func setTimeout(#funcToExec: () -> (), nanoDelay: Double) {
+        let delay = nanoDelay * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), funcToExec)
+    }
+    
+    func setBackGroundWhite() {
+        self.view.backgroundColor = UIColor.whiteColor()
+    }
 
     @IBAction func checkAnswer() {
         var correct: String = ""
         if answerInput.text! == String(answer) {
+            self.view.backgroundColor = UIColor.greenColor()
+            setTimeout(funcToExec: setBackGroundWhite, nanoDelay: 0.1)
             correct = "Correct"
             button1.title! = String(button1.title!.toInt()! + 1)
         } else {
+            self.view.backgroundColor = UIColor.redColor()
+            setTimeout(funcToExec: setBackGroundWhite, nanoDelay: 0.1)
             correct = "Wrong"
             button2.title! = String(button2.title!.toInt()! + 1)
         }
         answerInput.text = ""
         newProblem(level: 1, mathType: problemType.text!)
     }
+    
+    
 
     
     
